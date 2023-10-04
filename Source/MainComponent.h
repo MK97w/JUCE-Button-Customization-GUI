@@ -21,7 +21,7 @@ public:
     void toggleSwitchButtonClicked();
     bool toggleSwitchButtonState{ false };
 
-    void footSwitchButtonClicked();
+    bool footSwitchButtonPressed{ false };
     bool footSwitchButtonState{ false };
 
     void redraw();

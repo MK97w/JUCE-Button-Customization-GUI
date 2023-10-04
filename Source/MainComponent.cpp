@@ -25,18 +25,19 @@
 
         footSwitchButton.setImages(true, true, true,
             juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite,
-            juce::Image(), 1.0, juce::Colours::transparentWhite,
-            juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite,
+            juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite, //this is for overimage
+            juce::ImageCache::getFromMemory(BinaryData::footswitch_down_png, BinaryData::footswitch_down_pngSize), 1.0, juce::Colours::transparentWhite, //this is for when buttondown but öust add mouselistener
             0.0);
         addAndMakeVisible(footSwitchButton);
+        footSwitchButton.onClick = [this] {footSwitchButtonState = !footSwitchButtonState; redraw(); };
 
 
-       /* footSwitchLed.setImages(true, true, true,
-            juce::ImageCache::getFromMemory(BinaryData::led_red_off_png, BinaryData::led_red_off_pngSize), 1.0, juce::Colours::transparentWhite,
+        footSwitchLed.setImages(true, true, true,
+            juce::ImageCache::getFromMemory(BinaryData::led_blue_off_png, BinaryData::led_blue_off_pngSize), 1.0, juce::Colours::transparentWhite,
             juce::Image(), 1.0, juce::Colours::transparentWhite,
-            juce::ImageCache::getFromMemory(BinaryData::led_red_off_png, BinaryData::led_red_off_pngSize), 1.0, juce::Colours::transparentWhite,
+            juce::ImageCache::getFromMemory(BinaryData::led_blue_off_png, BinaryData::led_blue_off_pngSize), 1.0, juce::Colours::transparentWhite,
             0.0);
-        addAndMakeVisible(footSwitchLed);*/
+        addAndMakeVisible(footSwitchLed);
 
     }
 
@@ -63,7 +64,8 @@
 
         toggleSwitchButton.setBounds(9, 250, 35, 45);
         toggleSwitchLed.setBounds(40, 100, 35, 45);
-        footSwitchButton.setBounds(400, 250, 35, 45);
+        footSwitchButton.setBounds(300, 250, 35, 45);
+        footSwitchLed.setBounds(340,100,35,45);
     }
 
 
@@ -96,6 +98,24 @@
                 juce::ImageCache::getFromMemory(BinaryData::led_red_off_png, BinaryData::led_red_off_pngSize), 1.0, juce::Colours::transparentWhite,
                 juce::Image(), 1.0, juce::Colours::transparentWhite,
                 juce::ImageCache::getFromMemory(BinaryData::led_red_off_png, BinaryData::led_red_off_pngSize), 1.0, juce::Colours::transparentWhite,
+                0.0);
+        }
+
+        if (footSwitchButtonState)
+        {
+
+            footSwitchLed.setImages(true, true, true,
+                juce::ImageCache::getFromMemory(BinaryData::led_blue_on_png, BinaryData::led_blue_on_pngSize), 1.0, juce::Colours::transparentWhite,
+                juce::Image(), 1.0, juce::Colours::transparentWhite,
+                juce::ImageCache::getFromMemory(BinaryData::led_blue_on_png, BinaryData::led_blue_on_pngSize), 1.0, juce::Colours::transparentWhite,
+                0.0);
+        }
+        else
+        {
+            footSwitchLed.setImages(true, true, true,
+                juce::ImageCache::getFromMemory(BinaryData::led_blue_off_png, BinaryData::led_blue_off_pngSize), 1.0, juce::Colours::transparentWhite,
+                juce::Image(), 1.0, juce::Colours::transparentWhite,
+                juce::ImageCache::getFromMemory(BinaryData::led_blue_off_png, BinaryData::led_blue_off_pngSize), 1.0, juce::Colours::transparentWhite,
                 0.0);
         }
 
