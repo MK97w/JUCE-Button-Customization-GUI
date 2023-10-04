@@ -18,10 +18,25 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    void toggleSwitchButtonClicked();
+    bool toggleSwitchButtonState{ false };
+
+    void footSwitchButtonClicked();
+    bool footSwitchButtonState{ false };
+
+    void redraw();
+
 private:
     //==============================================================================
     // Your private member variables go here...
+    static constexpr int originalWidth{ 800 };
+    static constexpr int originalHeight{ 400 };
 
+    juce::ImageButton toggleSwitchButton;
+    juce::ImageButton toggleSwitchLed;
+    
+    juce::ImageButton footSwitchButton;
+    juce::ImageButton footSwitchLed;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

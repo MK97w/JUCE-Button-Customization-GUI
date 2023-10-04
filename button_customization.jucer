@@ -4,6 +4,21 @@
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
               jucerFormatVersion="1">
   <MAINGROUP id="ZwizPf" name="button_customization">
+    <GROUP id="{F7EF466B-1F61-AA13-EB3D-E86CEEF986EB}" name="Assets">
+      <FILE id="SLjIFH" name="footswitch_down.png" compile="0" resource="1"
+            file="Assets/footswitch_down.png"/>
+      <FILE id="z67v2u" name="footswitch_up.png" compile="0" resource="1"
+            file="Assets/footswitch_up.png"/>
+      <FILE id="HN5Shd" name="led_blue_off.png" compile="0" resource="1"
+            file="Assets/led_blue_off.png"/>
+      <FILE id="uDYyXY" name="led_blue_on.png" compile="0" resource="1" file="Assets/led_blue_on.png"/>
+      <FILE id="IcuDRo" name="led_red_off.png" compile="0" resource="1" file="Assets/led_red_off.png"/>
+      <FILE id="NDxXQC" name="led_red_on.png" compile="0" resource="1" file="Assets/led_red_on.png"/>
+      <FILE id="UAJ2PX" name="power_switch_down.png" compile="0" resource="1"
+            file="Assets/power_switch_down.png"/>
+      <FILE id="YqowKu" name="power_switch_up.png" compile="0" resource="1"
+            file="Assets/power_switch_up.png"/>
+    </GROUP>
     <GROUP id="{AA6A5A2C-7A6F-FA86-9A57-4FBC9345CB88}" name="Source">
       <FILE id="dse4RN" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="MWFdIM" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
