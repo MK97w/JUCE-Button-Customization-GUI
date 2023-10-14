@@ -1,6 +1,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "ButtonFactory.h"
 
 //==============================================================================
 /*
@@ -38,6 +39,8 @@ private:
     
     juce::ImageButton footSwitchButton;
     juce::ImageButton footSwitchLed;
+    
+    juce::CustomButtonFactory::testButton TestButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

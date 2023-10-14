@@ -38,7 +38,10 @@
             juce::ImageCache::getFromMemory(BinaryData::led_blue_off_png, BinaryData::led_blue_off_pngSize), 1.0, juce::Colours::transparentWhite,
             0.0);
         addAndMakeVisible(footSwitchLed);
+        
+        addAndMakeVisible(TestButton);
 
+        
     }
 
     MainComponent::~MainComponent()
@@ -66,6 +69,7 @@
         toggleSwitchLed.setBounds(40, 100, 35, 45);
         footSwitchButton.setBounds(300, 250, 35, 45);
         footSwitchLed.setBounds(340,100,35,45);
+        TestButton.setBounds(500, 250, 50, 50);
     }
 
 
