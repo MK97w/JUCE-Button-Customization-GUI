@@ -26,6 +26,7 @@ public:
 
     void redraw();
 
+
 private:
     //==============================================================================
     // Your private member variables go here...

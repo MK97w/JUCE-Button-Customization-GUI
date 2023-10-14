@@ -20,6 +20,9 @@
             file="Assets/power_switch_up.png"/>
     </GROUP>
     <GROUP id="{AA6A5A2C-7A6F-FA86-9A57-4FBC9345CB88}" name="Source">
+      <FILE id="XPIOx5" name="ButtonFactory.cpp" compile="1" resource="0"
+            file="Source/ButtonFactory.cpp"/>
+      <FILE id="V1x07Q" name="ButtonFactory.h" compile="0" resource="0" file="Source/ButtonFactory.h"/>
       <FILE id="dse4RN" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="MWFdIM" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="yAOuz7" name="MainComponent.cpp" compile="1" resource="0"
