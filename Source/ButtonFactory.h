@@ -21,7 +21,9 @@ public:
     {
         testButton();
         void mouseDown(const MouseEvent&)override;
-        //void mouseEnter();
+        void mouseUp(const MouseEvent&)override;
+        void redraw();
+        bool isDown{false};
     };
 };
 
