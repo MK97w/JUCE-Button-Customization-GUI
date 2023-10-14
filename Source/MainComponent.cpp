@@ -12,7 +12,7 @@
             juce::ImageCache::getFromMemory(BinaryData::power_switch_down_png, BinaryData::power_switch_down_pngSize), 1.0, juce::Colours::transparentWhite,
             0.0);
         addAndMakeVisible(toggleSwitchButton);
-        toggleSwitchButton.onClick = [this] { toggleSwitchButtonState = !toggleSwitchButtonState ; redraw(); DBG("pressed"); };
+        toggleSwitchButton.onClick = [this] { toggleSwitchButtonState = !toggleSwitchButtonState ; redraw();};
 
 
         toggleSwitchLed.setImages(true, true, true,
@@ -69,7 +69,7 @@
         toggleSwitchLed.setBounds(40, 100, 35, 45);
         footSwitchButton.setBounds(300, 250, 35, 45);
         footSwitchLed.setBounds(340,100,35,45);
-        TestButton.setBounds(500, 250, 50, 50);
+        TestButton.setBounds(500, 250, 175, 160);
     }
 
 
