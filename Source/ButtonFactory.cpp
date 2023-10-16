@@ -13,15 +13,14 @@
 namespace juce{
 
 
-
-
-CustomButtonFactory::testButton::testButton()
+CustomButtonFactory::testButton::testButton(ChangeListener& l)
 {
     setImages(true, true, true,
         juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite,
         juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite, //this is for overimage
         juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite, //this is for when buttondown but ˆust add mouselistener
         0.0);
+    addChangeListener(&l);
 }
 
 void CustomButtonFactory::testButton::mouseDown(const MouseEvent& event)

@@ -39,7 +39,7 @@
             0.0);
         addAndMakeVisible(footSwitchLed);
         
-        addAndMakeVisible(TestButton);
+        //addAndMakeVisible(TestButton);
 
         
     }
@@ -69,7 +69,7 @@
         toggleSwitchLed.setBounds(40, 100, 35, 45);
         footSwitchButton.setBounds(300, 250, 35, 45);
         footSwitchLed.setBounds(340,100,35,45);
-        TestButton.setBounds(500, 250, 175, 160);
+        //TestButton.setBounds(500, 250, 175, 160);
     }
 
 

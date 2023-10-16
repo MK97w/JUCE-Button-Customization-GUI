@@ -17,13 +17,22 @@ namespace juce
 class CustomButtonFactory
 {
 public:
-    struct testButton: ImageButton
+    struct testButton: ImageButton, ChangeBroadcaster
     {
-        testButton();
+        testButton(ChangeListener&);
         void mouseDown(const MouseEvent&)override;
         void mouseUp(const MouseEvent&)override;
         void redraw();
         bool isDown{false};
+    };
+    
+    struct testLED: ImageButton, ChangeListener
+    {
+        testLED();
+        void redraw();
+        void changeListenerCallback(ChangeBroadcaster *)override;
+        bool isOFF{true};
+        
     };
 };
 
