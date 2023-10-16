@@ -19,7 +19,7 @@ class CustomButtonFactory
 public:
     struct testButton: ImageButton, ChangeBroadcaster
     {
-        testButton(ChangeListener&);
+        testButton();
         void mouseDown(const MouseEvent&)override;
         void mouseUp(const MouseEvent&)override;
         void redraw();

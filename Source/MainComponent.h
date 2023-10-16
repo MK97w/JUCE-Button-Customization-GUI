@@ -40,7 +40,8 @@ private:
     juce::ImageButton footSwitchButton;
     juce::ImageButton footSwitchLed;
     
-    //juce::CustomButtonFactory::testButton TestButton;
+    juce::CustomButtonFactory::testButton TestButton;
+    juce::CustomButtonFactory::testLED LEDButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

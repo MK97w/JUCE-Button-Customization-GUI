@@ -39,13 +39,17 @@
             0.0);
         addAndMakeVisible(footSwitchLed);
         
-        //addAndMakeVisible(TestButton);
-
+        
+        
+        TestButton.addChangeListener(&LEDButton);
+        addAndMakeVisible(TestButton);
+        addAndMakeVisible(LEDButton);
         
     }
 
     MainComponent::~MainComponent()
     {
+        TestButton.removeChangeListener(&LEDButton);
     }
 
     //==============================================================================
@@ -69,7 +73,9 @@
         toggleSwitchLed.setBounds(40, 100, 35, 45);
         footSwitchButton.setBounds(300, 250, 35, 45);
         footSwitchLed.setBounds(340,100,35,45);
-        //TestButton.setBounds(500, 250, 175, 160);
+        
+        TestButton.setBounds(500, 250, 175, 160);
+        LEDButton.setBounds(540, 100, 50, 50);
     }
 
 
