@@ -5,30 +5,21 @@
     MainComponent::MainComponent()
     {
         setSize(originalWidth, originalHeight);
-       
+            
 
-       // toggleSwitchButton.onClick = [this] { toggleSwitchButtonState = !toggleSwitchButtonState ; redraw();};
+        addAndMakeVisible(PowerSwitch);
+        PowerSwitch.addChangeListener(&LEDButton1);
+        addAndMakeVisible(LEDButton1);
 
-
-        toggleSwitchLed.setImages(true, true, true,
-            juce::ImageCache::getFromMemory(BinaryData::led_red_off_png, BinaryData::led_red_off_pngSize), 1.0, juce::Colours::transparentWhite,
-            juce::Image(), 1.0, juce::Colours::transparentWhite,
-            juce::ImageCache::getFromMemory(BinaryData::led_red_off_png, BinaryData::led_red_off_pngSize), 1.0, juce::Colours::transparentWhite,
-            0.0);
-        addAndMakeVisible(toggleSwitchLed);
-
-
- 
-             
-        FootSwitch.addChangeListener(&LEDButton);
+        FootSwitch.addChangeListener(&LEDButton2);
         addAndMakeVisible(FootSwitch);
-        addAndMakeVisible(LEDButton);
+        addAndMakeVisible(LEDButton2);
         
     }
 
     MainComponent::~MainComponent()
     {
-        FootSwitch.removeChangeListener(&LEDButton);
+        FootSwitch.removeChangeListener(&LEDButton2);
     }
 
     //==============================================================================
@@ -48,12 +39,12 @@
         // If you add any child components, this is where you should
         // update their positions.
 
-        toggleSwitchButton.setBounds(9, 250, 35, 45);
-        toggleSwitchLed.setBounds(40, 100, 35, 45);
+        PowerSwitch.setBounds(15, 250, 100, 100);
+        LEDButton1.setBounds(40, 100, 50, 50);
 
         
         FootSwitch.setBounds(300, 250, 175, 160);
-        LEDButton.setBounds(340, 100, 50, 50);
+        LEDButton2.setBounds(340, 100, 50, 50);
     }
 
 

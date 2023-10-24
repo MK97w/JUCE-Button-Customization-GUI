@@ -104,7 +104,12 @@ CustomButtonFactory::toggleSwitchButton::toggleSwitchButton()
         0.0);
 }
 
-
+void CustomButtonFactory::toggleSwitchButton::clicked()
+{
+    isOn = !isOn;
+    sendChangeMessage();
+    redraw();
+}
 
 void CustomButtonFactory::toggleSwitchButton::redraw()
 {

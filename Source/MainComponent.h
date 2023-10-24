@@ -26,14 +26,14 @@ private:
     static constexpr int originalWidth{ 800 };
     static constexpr int originalHeight{ 400 };
 
-    juce::ImageButton toggleSwitchButton;
-    juce::ImageButton toggleSwitchLed;
+    juce::CustomButtonFactory::toggleSwitchButton PowerSwitch;
+    juce::CustomButtonFactory::LED LEDButton1;
     
    // juce::ImageButton footSwitchButton;
   //  juce::ImageButton footSwitchLed;
     
     juce::CustomButtonFactory::footSwitchButton FootSwitch;
-    juce::CustomButtonFactory::LED LEDButton;
+    juce::CustomButtonFactory::LED LEDButton2;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

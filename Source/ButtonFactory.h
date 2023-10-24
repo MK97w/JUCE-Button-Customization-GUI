@@ -37,7 +37,7 @@ public:
     struct toggleSwitchButton : ImageButton, ChangeBroadcaster
     {
         toggleSwitchButton();
-        void onClick();
+        void clicked() override;
         void redraw();
         bool isOn{false};
     };
