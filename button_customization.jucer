@@ -14,6 +14,12 @@
       <FILE id="uDYyXY" name="led_blue_on.png" compile="0" resource="1" file="Assets/led_blue_on.png"/>
       <FILE id="IcuDRo" name="led_red_off.png" compile="0" resource="1" file="Assets/led_red_off.png"/>
       <FILE id="NDxXQC" name="led_red_on.png" compile="0" resource="1" file="Assets/led_red_on.png"/>
+      <FILE id="s6imQJ" name="metronome_left.svg" compile="0" resource="1"
+            file="Assets/metronome_left.svg"/>
+      <FILE id="v8LOPF" name="metronome_neutral.svg" compile="0" resource="1"
+            file="Assets/metronome_neutral.svg"/>
+      <FILE id="wvS8X4" name="metronome_right.svg" compile="0" resource="1"
+            file="Assets/metronome_right.svg"/>
       <FILE id="UAJ2PX" name="power_switch_down.png" compile="0" resource="1"
             file="Assets/power_switch_down.png"/>
       <FILE id="YqowKu" name="power_switch_up.png" compile="0" resource="1"
