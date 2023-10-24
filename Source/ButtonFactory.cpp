@@ -13,7 +13,7 @@
 namespace juce{
 
 
-CustomButtonFactory::testButton::testButton()
+CustomButtonFactory::footSwitchButton::footSwitchButton()
 {
     setImages(true, true, true,
         juce::ImageCache::getFromMemory(BinaryData::footswitch_up_png, BinaryData::footswitch_up_pngSize), 1.0, juce::Colours::transparentWhite,
@@ -22,20 +22,20 @@ CustomButtonFactory::testButton::testButton()
         0.0);
 }
 
-void CustomButtonFactory::testButton::mouseDown(const MouseEvent& event)
+void CustomButtonFactory::footSwitchButton::mouseDown(const MouseEvent& event)
 {
     isDown = true;
     sendChangeMessage();
     redraw();
 }
-void CustomButtonFactory::testButton::mouseUp(const MouseEvent& event)
+void CustomButtonFactory::footSwitchButton::mouseUp(const MouseEvent& event)
 {
     isDown = false;
     redraw();
 }
 
 
-void CustomButtonFactory::testButton::redraw()
+void CustomButtonFactory::footSwitchButton::redraw()
 {
     if(isDown)
     {
@@ -56,7 +56,7 @@ void CustomButtonFactory::testButton::redraw()
     repaint();
 }
 
-CustomButtonFactory::testLED::testLED()
+CustomButtonFactory::LED::LED()
 {
     setImages(true, true, true,
               juce::ImageCache::getFromMemory(BinaryData::led_blue_off_png, BinaryData::led_blue_off_pngSize), 1.0, juce::Colours::transparentWhite,
@@ -66,7 +66,7 @@ CustomButtonFactory::testLED::testLED()
     
 }
 
-void CustomButtonFactory::testLED::redraw()
+void CustomButtonFactory::LED::redraw()
 {
     isOn = !isOn;
     
@@ -89,9 +89,57 @@ void CustomButtonFactory::testLED::redraw()
     repaint();
 }
 
-void CustomButtonFactory::testLED::changeListenerCallback(ChangeBroadcaster * b)
+void CustomButtonFactory::LED::changeListenerCallback(ChangeBroadcaster * b)
 {
     redraw();
 }
+
+
+CustomButtonFactory::toggleSwitchButton::toggleSwitchButton()
+{
+    setImages(true, true, true,
+        juce::ImageCache::getFromMemory(BinaryData::power_switch_down_png, BinaryData::power_switch_down_pngSize), 1.0, juce::Colours::transparentWhite,
+        juce::Image(), 1.0, juce::Colours::transparentWhite,
+        juce::ImageCache::getFromMemory(BinaryData::power_switch_down_png, BinaryData::power_switch_down_pngSize), 1.0, juce::Colours::transparentWhite,
+        0.0);
+}
+
+
+
+void CustomButtonFactory::toggleSwitchButton::redraw()
+{
+    if (isOn)
+    {
+
+            setImages(true, true, true,
+            juce::ImageCache::getFromMemory(BinaryData::power_switch_up_png, BinaryData::power_switch_up_pngSize), 1.0, juce::Colours::transparentWhite,
+            juce::Image(), 1.0, juce::Colours::transparentWhite,
+            juce::ImageCache::getFromMemory(BinaryData::power_switch_up_png, BinaryData::power_switch_up_pngSize), 1.0, juce::Colours::transparentWhite,
+            0.0);
+
+    }
+    else
+    {
+            setImages(true, true, true,
+            juce::ImageCache::getFromMemory(BinaryData::power_switch_down_png, BinaryData::power_switch_down_pngSize), 1.0, juce::Colours::transparentWhite,
+            juce::Image(), 1.0, juce::Colours::transparentWhite,
+            juce::ImageCache::getFromMemory(BinaryData::power_switch_down_png, BinaryData::power_switch_down_pngSize), 1.0, juce::Colours::transparentWhite,
+            0.0);
+
+    }
+    repaint();
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -19,14 +19,6 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
-    void toggleSwitchButtonClicked();
-    bool toggleSwitchButtonState{ false };
-
-    bool footSwitchButtonPressed{ false };
-    bool footSwitchButtonState{ false };
-
-    void redraw();
-
 
 private:
     //==============================================================================
@@ -37,11 +29,11 @@ private:
     juce::ImageButton toggleSwitchButton;
     juce::ImageButton toggleSwitchLed;
     
-    juce::ImageButton footSwitchButton;
-    juce::ImageButton footSwitchLed;
+   // juce::ImageButton footSwitchButton;
+  //  juce::ImageButton footSwitchLed;
     
-    juce::CustomButtonFactory::testButton TestButton;
-    juce::CustomButtonFactory::testLED LEDButton;
+    juce::CustomButtonFactory::footSwitchButton FootSwitch;
+    juce::CustomButtonFactory::LED LEDButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
