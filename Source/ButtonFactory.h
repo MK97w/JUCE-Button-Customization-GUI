@@ -42,9 +42,13 @@ public:
         bool isOn{false};
     };
 
-    struct dynamicSVGButton : DrawableButton
+    struct dynamicSVGButton : DrawableButton, Timer
     {
         dynamicSVGButton(const String& buttonName, ButtonStyle buttonStyle);
+        void clicked() override;
+        bool isOn{ false };
+        void animate();
+        void timerCallback() final;
     };
 
 };

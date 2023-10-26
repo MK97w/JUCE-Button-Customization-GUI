@@ -155,7 +155,86 @@ CustomButtonFactory::dynamicSVGButton::dynamicSVGButton(const String& buttonName
         jassert(svg != nullptr);
 }
 
+void CustomButtonFactory::dynamicSVGButton::clicked()
+{
+    DBG("clicked");
+    isOn = !isOn;
+    if (isOn)
+        startTimer(500);
 
+    else
+    {
+        stopTimer();
+        if (const auto svg = XmlDocument::parse(BinaryData::metronome_neutral_svg))
+        {
+            const auto drawable = Drawable::createFromSVG(*svg);
+            auto drawableArgument = drawable.get();
+            setImages(drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument);
+        }
+        else
+            jassert(svg != nullptr);
+    }
+}
+void CustomButtonFactory::dynamicSVGButton::animate()
+{
+    static bool isLeft{ true };
 
+    if (isLeft)
+    {
+        if (const auto svg = XmlDocument::parse(BinaryData::metronome_left_svg))
+        {
+            const auto drawable = Drawable::createFromSVG(*svg);
+            auto drawableArgument = drawable.get();
+            setImages(drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument);
+        }
+        else
+            jassert(svg != nullptr);
+
+        repaint();
+    }
+    else
+    {
+        if (const auto svg = XmlDocument::parse(BinaryData::metronome_right_svg))
+        {
+            const auto drawable = Drawable::createFromSVG(*svg);
+            auto drawableArgument = drawable.get();
+            setImages(drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument,
+                drawableArgument);
+        }
+        else
+            jassert(svg != nullptr);
+
+        repaint();
+    }
+
+    isLeft = !isLeft;
+
+}
+
+void CustomButtonFactory::dynamicSVGButton::timerCallback() 
+{
+    animate();
+    
+}
 
 }
