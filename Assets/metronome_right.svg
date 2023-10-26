@@ -1,11 +1,13 @@
-<svg width="134" height="131" viewBox="0 0 134 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="22" y1="2.5" x2="72" y2="2.5" stroke="black" stroke-width="5"/>
-<line x1="24.4627" y1="2.43" x2="2.46274" y2="128.43" stroke="black" stroke-width="5"/>
-<line x1="69.4416" y1="1.46267" x2="96.9326" y2="126.38" stroke="black" stroke-width="5"/>
-<line y1="128.5" x2="100" y2="128.5" stroke="black" stroke-width="5"/>
-<line x1="50.1847" y1="79.6011" x2="132.145" y2="10.8153" stroke="black" stroke-width="3" stroke-linecap="round"/>
-<line x1="22" y1="2.5" x2="72" y2="2.5" stroke="black" stroke-width="5"/>
-<line x1="24.4627" y1="2.43" x2="2.46274" y2="128.43" stroke="black" stroke-width="5"/>
-<line x1="69.4416" y1="1.46267" x2="96.9326" y2="126.38" stroke="black" stroke-width="5"/>
-<line x1="50.1847" y1="79.6011" x2="132.145" y2="10.8153" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<svg width="70" height="70" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_5" d="m30.0471,34.35692l9.97645,0" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <path id="svg_7" d="m26.52276,64.21507" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_10" y2="59.52137" x2="25" y1="34.1159" x1="30.54053" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_11" y2="60" x2="46" y1="33.90333" x1="39.51717" stroke="#000" fill="none"/>
+  <path id="svg_12" d="m24.53948,59.63676l21.87082,0.10288" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_14" y2="53.14908" x2="44.5853" y1="52.87807" x1="26.42793" stroke="#000" fill="none"/>
+  <line transform="rotate(25, 39.2478, 36.0696)" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_18" y2="45.87718" x2="39.31" y1="26.26209" x1="39.18562" stroke="#000" fill="none"/>
+ </g>
 </svg>

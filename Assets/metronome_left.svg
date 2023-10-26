@@ -1,7 +1,13 @@
-<svg width="133" height="131" viewBox="0 0 133 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="55" y1="2.5" x2="105" y2="2.5" stroke="black" stroke-width="5"/>
-<line x1="57.4627" y1="2.43" x2="35.4627" y2="128.43" stroke="black" stroke-width="5"/>
-<line x1="102.442" y1="1.46267" x2="129.933" y2="126.38" stroke="black" stroke-width="5"/>
-<line x1="33" y1="128.5" x2="133" y2="128.5" stroke="black" stroke-width="5"/>
-<line x1="1.5" y1="-1.5" x2="108.5" y2="-1.5" transform="matrix(0.765985 0.642858 0.642858 -0.765985 2 2)" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<svg width="70" height="70" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_5" d="m30.0471,34.35692l9.97645,0" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <path id="svg_7" d="m26.52276,64.21507" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_10" y2="59.52137" x2="25" y1="34.1159" x1="30.54053" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_11" y2="60" x2="46" y1="33.90333" x1="39.51717" stroke="#000" fill="none"/>
+  <path id="svg_12" d="m24.53948,59.63676l21.87082,0.10288" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_14" y2="53.14908" x2="44.5853" y1="52.87807" x1="26.42793" stroke="#000" fill="none"/>
+  <line transform="rotate(-25, 31.1468, 36.018)" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_24" y2="45.82558" x2="31.20901" y1="26.21049" x1="31.08464" stroke="#000" fill="none"/>
+ </g>
 </svg>
