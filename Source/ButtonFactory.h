@@ -42,6 +42,11 @@ public:
         bool isOn{false};
     };
 
+    struct dynamicSVGButton : DrawableButton
+    {
+        dynamicSVGButton(const String& buttonName, ButtonStyle buttonStyle);
+    };
+
 };
 
 

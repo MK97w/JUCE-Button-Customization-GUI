@@ -2,7 +2,8 @@
 
 
     //==============================================================================
-    MainComponent::MainComponent()
+MainComponent::MainComponent()
+    :Metronome(juce::String(), juce::DrawableButton::ButtonStyle::ImageFitted)
     {
         setSize(originalWidth, originalHeight);
             
@@ -14,7 +15,8 @@
         FootSwitch.addChangeListener(&LEDButton2);
         addAndMakeVisible(FootSwitch);
         addAndMakeVisible(LEDButton2);
-        
+
+        addAndMakeVisible(Metronome);
     }
 
     MainComponent::~MainComponent()
@@ -45,6 +47,8 @@
         
         FootSwitch.setBounds(300, 250, 175, 160);
         LEDButton2.setBounds(340, 100, 50, 50);
+        
+        Metronome.setBounds(500,250,100,100);
     }
 
 

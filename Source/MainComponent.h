@@ -35,5 +35,8 @@ private:
     juce::CustomButtonFactory::footSwitchButton FootSwitch;
     juce::CustomButtonFactory::LED LEDButton2;
 
+
+    juce::CustomButtonFactory::dynamicSVGButton Metronome;
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

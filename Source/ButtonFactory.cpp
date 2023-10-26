@@ -135,14 +135,25 @@ void CustomButtonFactory::toggleSwitchButton::redraw()
     repaint();
 }
 
-
-
-
-
-
-
-
-
+CustomButtonFactory::dynamicSVGButton::dynamicSVGButton(const String& buttonName = String(), ButtonStyle buttonStyle = ImageFitted)
+    :DrawableButton(buttonName, buttonStyle)
+{
+    if (const auto svg = XmlDocument::parse(BinaryData::metronome_neutral_svg))
+    {
+        const auto drawable = Drawable::createFromSVG(*svg);
+        auto drawableArgument = drawable.get();
+        setImages(drawableArgument,
+            drawableArgument,
+            drawableArgument,
+            drawableArgument,
+            drawableArgument,
+            drawableArgument,
+            drawableArgument,
+            drawableArgument);
+    }
+    else
+        jassert(svg != nullptr);
+}
 
 
 
